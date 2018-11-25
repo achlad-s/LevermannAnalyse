@@ -7,18 +7,17 @@ public class App
 {
 
     public static void main (String...args){
-
         Session session = HibernateUtil.getSession();
         Transaction tx = session.beginTransaction();
 
-        Book book = new Book();
-        book.setAuthor("Memorynotfound");
-        book.setTitle("MySQL / Mariadb + Hibernate XML Configuration Example");
+        Company company = new Company();
+        company.setAuthor("Memorynotfound");
+        company.setTitle("MySQL / Mariadb + Hibernate XML Configuration Example");
 
-        book.setPrice(24.95);
-        book.setYear(2016);
+        company.setPrice(24.95);
+        company.setYear(2016);
 
-        session.save(book);
+        session.save(company);
         tx.commit();
 
         session.close();
